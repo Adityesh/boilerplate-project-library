@@ -79,7 +79,7 @@ suite('Functional Tests', function() {
         .get('/api/books')
         .end(function(err, res){
         assert.equal(res.status, 200);
-        assert.isArray(res.body,'No title provided')
+        assert.isArray(res.body)
         assert.isUndefined(res.body.title)
         done();
         });
